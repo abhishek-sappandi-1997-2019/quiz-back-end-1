@@ -1,15 +1,12 @@
 const express = require('express')
 const router = express.Router()
 
-const quizController = require('../app/controllers/quizController')
+const quizController = require('../app/controllers/quiz')
 
 router.get('/api/quiz',quizController.list)
-router.get('/api/quiz/:id',quizController.show)
+router.get('/api/quiz/:id',quizController.get)
 router.post('/api/quiz'  , quizController.create)
 router.put('/api/quiz/:id', quizController.update)
-router.put('/api/quiz/add/:id' , quizController.addChoice)
-router.put('/api/quiz/remove/:id' , quizController.removeChoice)
-// router.delete('/api/products/:id' ,quizController.destroy)
-// router.get('/api/products/category/:id',quizController.listspecific)
+router.delete('/api/quiz/:id' , quizController.remove)
 
 module.exports = router

@@ -6,10 +6,22 @@ const quizSchema = new Schema({
         type : String ,
         required : [true, 'question is required']
     } ,
-    options : {
-        type : Array ,
-        required : true
-    },
+    options : [
+        {
+            value : {
+                type : String,
+                required : true
+            },
+            isCorrect : {
+                type : Boolean ,
+                required : true
+            }
+        }
+    ],
+    // options : {
+    //     type : Array ,
+    //     required : true
+    // },
     answer :{
         type : String,
         required : true

@@ -53,7 +53,7 @@ quizController.update = (req, res) => {
     const _id = req.params.id
     const type = req.query.type
     const body = req.body
-    if(!id) res.json({});
+    if(!_id) res.json({});
     else {
         Quiz.updateByType(_id , type , body)
         .then((question) => {

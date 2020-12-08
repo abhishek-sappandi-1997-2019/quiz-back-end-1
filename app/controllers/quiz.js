@@ -16,25 +16,6 @@ quizController.list = (req, res) => {
         })
 }
 
-// This returns question by id.
-quizController.get = (req, res) => {
-    const id = req.params.id
-    if(!id) res.json({});
-    else {
-    Quiz.findById(id)
-        .then((question) => {
-            if (question) {
-                res.json(question)
-            } else {
-                res.json({})
-            }
-        })
-        .catch((err) => {
-            res.json(err)
-        })
-    }
-}
-
 // This create questions
 quizController.create = (req, res) => {
     const body = req.body

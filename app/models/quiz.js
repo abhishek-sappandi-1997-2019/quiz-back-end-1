@@ -18,10 +18,6 @@ const quizSchema = new Schema({
             }
         }
     ],
-    // options : {
-    //     type : Array ,
-    //     required : true
-    // },
     answer :{
         type : String,
         required : true
